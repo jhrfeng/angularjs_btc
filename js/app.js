@@ -1,6 +1,6 @@
-var app = angular.module('GalleryApp', ['ngRoute', 'ui.router']);
+var app = angular.module('GalleryApp', ['ui.router']); //'ngRoute',
 
-app.config(function ($routeProvider, $stateProvider, $urlRouterProvider) { 
+app.config(function ($stateProvider, $urlRouterProvider) { //$routeProvider, 
 	$urlRouterProvider.when('', '/home');
 	$stateProvider
 		.state('home',{
