@@ -6,7 +6,14 @@ app.config(function ($stateProvider, $urlRouterProvider) { //$routeProvider,
 		.state('home',{
 			url:'/home',
 			templateUrl: 'views/home.html',
-			controller: 'HomeController', 
+			controller: 'HomeController',
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		return $ocLazyLoad.load([
+			 			'js/json/home.js'
+			 		]);
+			 	}]
+			}
 		})
 		.state('aboutus',{
 			url:'/aboutus',
@@ -40,7 +47,6 @@ app.config(function ($stateProvider, $urlRouterProvider) { //$routeProvider,
 			controller: 'InvestController', 
 			resolve: {
 			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
-			 		console.log($ocLazyLoad)
 			 		return $ocLazyLoad.load([
 			 			'js/json/invest.js'
 			 		]);

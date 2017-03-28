@@ -101,150 +101,26 @@
 		</div>
 	</div>
 	
-	<div id="gy_treasure_xszx_bid">
-		<div class="gy_treasure_xsbid_main px1000 clearfix">
-			<div class="gy_treasure_xszx_bid_tu">
-				<img src="images/gy_treasure_xszx_bid_tu.png">
-			</div>
-			<div class="">
-				<div class="gy_treasure_xsbid_left fl">
-					<div class="gy_treasure_xsbid_left_up">
-						<div class="fl gy_caifu_oone" >
-							<p class="gy_treasure_ccp_bid">
-								<span class="">新手专享投资项目第345期A</span>
-								<span><img src="images/gy_treasure_xszx_bid_hot.png"></span>
-							</p>
-							<p class="gy_treasure_bili_bid">
-								<span>18.20</span>
-								<span style="font-size:20.49px;">%</span>
-							</p>
-							<p>年化收益率</p>
-						</div>
-						<div class="fl gy_caifu_oont">
-							<p class="gy_treasure_bili_bid">30</p>
-							<p>项目期限（天）</p>
-						</div>
-						<div class="gy_treasure_xsbid_right fl">
-							<p>距下场更新：<span>16 时 53 分 08 秒</span></p>
-							<div class="gy_treasure_xsbid_right_one">
-							<div class="fl" style="color:#29A7E1">正在筹集</div>
-							<div class="gy_treasur_bg1 fl">
-								<div class="gy_treasur_bg2" style="width:50%;">
-									
-								</div>
-							</div>
-							<span class="fl" style="font-size:15.27px;color:#29A7E1;">50%</span>
-							</div>
-						</div>
-					</div>
-					<div class="fl">
-						<div class="gy_treasure_xsbid_down">
-							<span class="gy_treasure_x_cp">企投金额：1元</span>
-							<span class="gy_treasure_x_cp">付息方式：按月</span>
-							<span class="gy_treasure_x_cp">赎回方式：T+10， 投资满30天即可申请赎回，赎回期内同等计息</span>
-						</div>
-					</div>
-				</div>
-				<div class="gy_treasure_xsbid_r_rdo fr">
-					<div class="gy_treasure_xsbid_r_rping">
-						<input type="text" value="输入金额" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '输入金额';}"/>
-						<img src="images/gy_treasure_small_bgt.png">
-						<input type="text" value="预期收益" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '预期收益';}"/>
-						<div class="gy_treasure_xsbid_down_tbmain">
-							<a href="">
-								<p class="gy_treasure_xsbid_down_tb">
-								立即投标
-								</p>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-<div id="gy_treasure_xszx_bid">
-		<div class="gy_treasure_xsbid_main12 px1000 clearfix">
-			<div class="">
-			<div class="gy_treasure_xszx_bid_tu">
-				<img src="images/gy_treasure_xszx_bid_ppp.png">
-			</div>
-				<div class="gy_treasure_xsbid_left fl">
-					<div class="gy_treasure_xsbid_left_up">
-						<div class="fl gy_caifu_oone" >
-							<p class="gy_treasure_ccp_bid">
-								<span class="">新手专享投资项目第345期A</span>
-								<span><img src="images/gy_treasure_xszx_bid_hot.png"></span>
-							</p>
-							<p class="gy_treasure_bili_bid">
-								<span>18.20</span>
-								<span style="font-size:20.49px;">%</span>
-							</p>
-							<p>年化收益率</p>
-						</div>
-						<div class="fl gy_caifu_oont">
-							<p class="gy_treasure_bili_bid">30</p>
-							<p>项目期限（天）</p>
-						</div>
-						<div class="gy_treasure_xsbid_right fl">
-							<p>距下场更新：<span>16 时 53 分 08 秒</span></p>
-							<div class="gy_treasure_xsbid_right_one">
-							<div class="fl" style="color:#29A7E1">正在筹集</div>
-							<div class="gy_treasur_bg1 fl">
-								<div class="gy_treasur_bg2" style="width:40%;">
-									
-								</div>
-							</div>
-							<span class="fl" style="font-size:15.27px;color:#29A7E1;">45%</span>
-							</div>
-						</div>
-					</div>
-					<div class="fl">
-						<div class="gy_treasure_xsbid_down">
-							<span class="gy_treasure_x_cp">企投金额：1元</span>
-							<span class="gy_treasure_x_cp">付息方式：按月</span>
-							<span class="gy_treasure_x_cp">赎回方式：T+10， 投资满30天即可申请赎回，赎回期内同等计息</span>
-						</div>
-					</div>
-				</div>
-				<div class="gy_treasure_xsbid_r_rdo fr">
-					<div class="gy_treasure_xsbid_r_rping">
-						<input type="text" value="输入金额" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '输入金额';}"/>
-						<img src="images/gy_treasure_small_bgt.png">
-						<input type="text" value="预期收益" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '预期收益';}"/>
-						<div class="gy_treasure_xsbid_down_tbmain">
-							<a href="">
-								<p class="gy_treasure_xsbid_down_tb">
-								立即投标
-								</p>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div id="gy_treasure_xszx_bids">
+	<div ng-repeat="product in productList">
+			<div id="gy_treasure_xszx_bids">
 		<div class="gy_treasure_xsbid_masin px1000 clearfix">
 			<div class="">
 				<div class="gy_treasure_xsbid_left fl">
 					<div class="gy_treasure_xsbid_left_up">
 						<div class="fl gy_caifu_oone" >
 							<p class="gy_treasure_ccp_bid">
-								<span class="">新手专享投资项目第345期A</span>
+								<span class="">{{product.name}}</span>
 								<span><img src="images/gy_treasure_xszx_bid_hot.png"></span>
 							</p>
 							<p class="gy_treasure_bili_bid">
-								<span>18.20</span>
+								<span>{{product.shouyi}}</span>
 								<span style="font-size:20.49px;">%</span>
 							</p>
 							<p>年化收益率</p>
 						</div>
 						<div class="fl gy_caifu_oont">
-							<p class="gy_treasure_bili_bid">30</p>
-							<p>项目期限（天）</p>
+							<p class="gy_treasure_bili_bid">{{product.week}}</p>
+							<p>比特币产品期限（天）</p>
 						</div>
 						<div class="gy_treasure_xsbid_right fl">
 							<p>距下场更新：<span>16 时 53 分 08 秒</span></p>
@@ -261,14 +137,14 @@
 					</div>
 					<div class="fl">
 						<div class="gy_treasure_xsbid_down">
-							<span class="gy_treasure_x_cp">企投金额：1元</span>
+							<span class="gy_treasure_x_cp">起投金额：{{product.join}}</span>
 							<span class="gy_treasure_x_cp">付息方式：按月</span>
-							<span class="gy_treasure_x_cp">赎回方式：T+10， 投资满30天即可申请赎回，赎回期内同等计息</span>
+							<span class="gy_treasure_x_cp">赎回方式：T+10， 投资满30天即可申请赎回</span>
 						</div>
 					</div>
 					<div class="fl">
 						<div class="gy_treasure_xsll_down">
-							<span class="gy_treasure_xsll_cp"><a href="">查看更多投资理财项目</a></span>
+							<span class="gy_treasure_xsll_cp"></span>
 						</div>
 					</div>
 				</div>
@@ -291,6 +167,9 @@
 	</div>
 
 	
+	</div>
+
+
 	<div id="gy_guide_goverfirm_debt">
 		<div class="px1000">
 			<div class="gy_guide_gf_de_main_vbc clearfix">
