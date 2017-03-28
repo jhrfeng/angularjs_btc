@@ -1,4 +1,4 @@
-var app = angular.module('GalleryApp', ['ui.router']); //'ngRoute',
+var app = angular.module('GalleryApp', ['ui.router','oc.lazyLoad']); //'ngRoute',
 
 app.config(function ($stateProvider, $urlRouterProvider) { //$routeProvider, 
 	$urlRouterProvider.when('', '/home');
@@ -38,12 +38,20 @@ app.config(function ($stateProvider, $urlRouterProvider) { //$routeProvider,
 			url:'/invest',
 			templateUrl: 'views/invest.html',
 			controller: 'InvestController', 
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		console.log($ocLazyLoad)
+			 		return $ocLazyLoad.load([
+			 			'js/json/invest.js'
+			 		]);
+			 	}]
+			}
 		})
-//		.state('register',{
-//			url:'/register',
-//			templateUrl: 'views/register.html',
-//			controller: 'RegisterController', 
-//		});
+		.state('me',{
+			url:'/me',
+			templateUrl: 'views/me.html',
+			controller: 'MeController', 
+		});
 		
 //$routeProvider 
 //  .when('/home', { 

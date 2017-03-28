@@ -1,5 +1,4 @@
-app.controller('SafetyController', ['$scope', 'photos', '$routeParams', function($scope, photos, $routeParams) {
-  photos.success(function(data) {
-    $scope.detail = data[$routeParams.id];
-  });
+app.controller('InvestController', ['$scope', 'photos', function($scope, photos) {
+	$scope.questionList = questionList; // 通过懒加载，加载配置JSON信息
+	console.log($scope.questionList)
 }]);
