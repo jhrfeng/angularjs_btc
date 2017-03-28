@@ -1459,7 +1459,7 @@ background: url(../images/gy_treasure_kind05.png) no-repeat center center;
 }
 
 .gy_guide_gf_sz{
-	font-size:73.69px;
+	font-size:60.69px;
 	color: #FC8026;
 }
 .gy_guide_gfc_bfh{
@@ -1487,6 +1487,7 @@ background: url(../images/gy_treasure_kind05.png) no-repeat center center;
 .gy_guide_gf_thrch{
 	width: 245px;
 	border-left: 1px solid #EAEAEA;
+	border-right: 1px solid #EAEAEA;
 }
 .gy_guide_gf_poing{
 	font-size: 14px;
