@@ -1877,7 +1877,7 @@ border-bottom: 1px solid #5E5E5E;}
 .gy_guide_particulars_information_main{font-size: 14px;color: #aaaaaa;border:1px solid #E6E6E6;}
 .particulars_information_l,.particulars_information_r{width: 460px;text-align: right;margin-right: 20px;}
 .particulars_information_down,.particulars_information_up{margin: 20px 0;}
-.particulars_information_down input,.particulars_information_up input{ border:0;outline:none;width: 350px;text-indent:10px;}
+.particulars_information_down input,.particulars_information_up input{ border:0;outline:none;width: 350px;text-indent:10px;font-weight: bold;color: #615b5b;font-size: 15px;}
 .particulars_information_footer{width: 1000px}
 .particulars_information_footer div{padding: 15px 25px;}
 .dianjicichu a{color:#FC8026;text-decoration: underline; }
