@@ -1,5 +1,6 @@
-app.controller('MeController', ['$scope', 'photos', '$routeParams', function($scope, photos, $routeParams) {
-  // photos.success(function(data) {
-  //   $scope.detail = data[$routeParams.id];
-  // });
+app.controller('MeController', 
+['$rootScope', '$scope', 
+function($rootScope, $scope) {
+	
+  $rootScope.header = true;
 }]);
