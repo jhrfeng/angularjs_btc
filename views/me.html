@@ -1,19 +1,64 @@
+<!--公告 -->
 
-	<!--公告 -->
-	
-	<div id="gy_guide_safety_xzk">
-		<div class="px1000" id="gy_guide_announcement">
-			<div class="clearfix gy_guide_announcement_bigbox">
-				<div class="fl gy_guide_announcement_left">
-					<nav>
-						<p class="gy_member_submenu_zc"><a href="">用户中心</a></p>
-					</nav>
-				</div>
-				<!--split line-->
-				<div class="fl gy_guide_announcement_rigth" id="gsjj" style="display:block;text-align:left;">
-					
-						
-				</div>
+<div id="gy_guide_safety_xzk">
+	<div class="px1000" id="gy_guide_announcement">
+		<div class="clearfix gy_guide_announcement_bigbox">
+			<div class="fl gy_guide_announcement_left">
+				<nav>
+					<p class="gy_member_submenu_zc">
+						<a href="">用户中心</a>
+					</p>
+				</nav>
+				<ul style="text-align: center;height: 200px;">
+					<li>
+						<button type="button" class="btn btn-primary" style="width:100%;height:50px;" ng-click="toChangeView(1)">基本信息</button>
+					</li>
+					<li>
+						<button type="button" class="btn btn-primary" style="width:100%;height:50px ;" ng-click="toChangeView(2)">资金动态</button>
+					</li>
+					<li>
+						<button type="button" class="btn btn-primary" style="width:100%;height:50px ;" ng-click="toChangeView(3)">支付赎回</button>
+					</li>
+				</ul>
 			</div>
-		</div>
-	</div>
+			<!--split line-->
+			<div class="fl gy_guide_announcement_rigth" id="gsjj" style="display:block;text-align:left;height: 100%;" ng-show="tabshow=='1'">
+				<div class="col-sm-10">
+					<div class="bk-pageTit clearfix">
+						<h4 style="text-align: center; font-size: 20px;width: 100%;margin-left: 10%;">基本信息</h4>
+					</div>
+				</div>
+				<div>
+							<table class="table" width="200%" border="0" style="margin-left:10%;margin-top: 20px;border-collapse: separate;border-spacing: 10px;">
+								<tr style="height: 50px;background-color: #CBCBCB;">
+									<td><span style="font-size: 15px;">用户名:</span><span style="margin-left: 16px;">{{userName}}</span></td>
+								</tr>
+								<tr style="height: 50px;background-color: #CBCBCB;">
+									<td><span style="font-size: 15px;">用户密码:</span><span style="margin-left: 16px;">{{passWord}}</span></td>
+								</tr>
+								<tr style="height: 50px;background-color: #CBCBCB;">
+									<td><span style="font-size: 15px;">资金密码:</span><span style="margin-left: 16px;">{{payPassWord}}</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+						<!--split line-->
+						<div class="fl gy_guide_announcement_rigth" id="sss" style="display:block;text-align:left;height: 100%;" ng-show="tabshow=='2'">
+							<div class="col-sm-10">
+								<div class="bk-pageTit clearfix">
+									<h4 style="text-align: center; font-size: 20px;width: 100%;margin-left: 10%;">资金动态{{tabshow}}</h4>
+								</div>
+							</div>
+						</div>
+								<!--split line-->
+								<div class="fl gy_guide_announcement_rigth" id="" style="display:block;text-align:left;height: 100%;" ng-show="tabshow=='3'">
+									<div class="col-sm-10">
+										<div class="bk-pageTit clearfix">
+											<h4 style="text-align: center; font-size: 20px;width: 100%;margin-left: 10%;">支付赎回{{tabshow}}</h4>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
