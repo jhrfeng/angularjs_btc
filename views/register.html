@@ -1,134 +1,63 @@
 <script type="text/javascript" src="lib/app/all.js"></script>
 
 <br><br>
-		<div id="form_main" class="px1000 clearfix">
-		<div class="form_main_grjg_xx">
-			<span id="form_main_gr">个人注册</span>
-			<span id="form_main_jg">机构注册</span>
-		</div>
-		<div>
-			<div id="login1" class="left_form fl" >
-				<form>
-					<div class="form_lb">
-						<lable>手机/邮箱:</lable>
-						<input type="text" class="form-control" value="请输入手机/邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入手机/邮箱';}">
-					</div>
-					<div class="form_lb clearfix">
-							<lable>密码:</lable>
-							<input type="text" class="form-control" value="请输入密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入密码';}">
-							<div class="saf_lv_main fl">	
-								<div style="background:#29A7E1;" class="saf_lv"></div>
-						   	 	<div style="background:#29A7E1;" class="saf_lv"></div>
-						   	 	<div class="saf_lv"></div>
-						   	 	<div class="saf_lv"></div>
-						   	 	<div class="saf_lv"></div>
-					   	 	</div>
-					</div>
-					<div class="form_lb">
-						<lable>确认密码:</lable>
-						<input type="text" class="form-control " value="请再次输入密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请再次输入密码';}">
-					</div>
-					
-					<div class="form_lb">
-						<lable>图片验证码:</lable>
-						<input type="text" class="chcode " value="请输入右边的验证码" onfocus="this.value ='';" onblur="if (this.value == '') {this.value = '请输入右边的验证码';}">
-						<span><img src="images/checkcode.png"></span>
-					</div>
-					<div class="form_lb">
-						<lable>邀请码:</lable>
-						<input type="text" class="form-control " value="选填" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '选填';}">	
-					</div>
-					<div class="form_lb cheb_yes">
-						 <input type="checkbox" name="" value=""/>
-						 <span>我已阅读并同意ppp在线的<a href=""><span style="color:#29A7E1;">《服务条款》</span></a> </span>
-					 	 <p><a href=""><img src="images/login_btn.png"></a></p>
-					</div>
-				</form>
+<div id="form_main" class="px1000 clearfix">
+	<div id="login1" class="left_form fl" >
+		<form class="bs-example bs-example-form" role="form">
+			<div class="input-group">
+				<span class="input-group-addon">手机号&nbsp;&nbsp;</span>
+				<input type="text" class="form-control" placeholder="请输入手机号">
 			</div>
-			<div id="login2" class="left_form fl" style="display:none;">
-				<form>
-					<div class="form_lb">
-						<lable>机构用户名:</lable>
-						<input type="text" class="form-control" value="请输入机构用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入机构用户名';}">
-					</div>
-					<div class="form_lb">
-						<lable>机构类型:</lable>
-						<select name="select" id="select_k1" class="xla_k">
-							<option value="国营企业">国营企业</option>
-							<option value="民营企业">民营企业</option>
-							<option value="政府单位">政府单位</option>
-							<option value="社会团体">社会团体</option>
-							<option value="慈善机构">慈善机构</option>
-    					</select>
-					</div>
-					<div class="form_lb">
-						<lable>办公所在地:</lable>
-						<select name="select" id="form_lb_diqu" class="form_lb_diqu">
-							<option value="国营企业">北京</option>
-    					</select><span style="margin:auto 5px;color:#808080;">省</span>
-    					<select name="select" id="form_lb_diqu" class="form_lb_diqu">
-							<option value="国营企业">北京</option>
-    					</select><span style="margin:auto 5px;color:#808080;">市</span>
-					</div>
-						
-					<div class="form_lb_name">
-						<lable>联系人姓名:</lable>
-						<input type="text" class="form_control_name" value="真实姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '真实姓名';}">
-						<input type="radio" value="先生" name="men">先生
-						<input type="radio" value="女士" name="women">女士
-					</div>
-
-					<div class="form_lb">
-						<lable>手机号:</lable>
-						<input type="text" class="form-control" value="请输入手机号" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入手机号';}">
-					</div>
-					<div class="form_lb">
-						<lable>固定号码:</lable>
-						<input type="text" class="form-control" value="选填" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '选填';}">
-					</div>
-
-					<div class="form_lb">
-						<lable>邮箱:</lable>
-						<input type="text" class="form-control" value="选填" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '选填';}">
-					</div>
-
-					<div class="form_lb">
-						<lable>推荐人:</lable>
-						<input type="text" class="form-control" value="选填" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '选填';}">
-					</div>
-
-					<div class="form_lb clearfix">
-							<lable>密码:</lable>
-							<input type="text" class="form-control" value="请输入密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入密码';}">
-							<div class="saf_lv_main fl" >
-								<div class="saf_lv_main_jd">
-									<div style="background:#29A7E1;" class="saf_lv"></div>
-							   	 	<div style="" class="saf_lv"></div>
-							   	 	<div class="saf_lv"></div>
-							   	 	<div class="saf_lv"></div>
-							   	 	<div class="saf_lv"></div>
-						   	 	</div>	
-					   	 	</div>
-					</div>
-					<div class="form_lb">
-						<lable>确认密码:</lable>
-						<input type="text" class="form-control " value="请再次输入密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请再次输入密码';}">
-					</div>
-					
-					
-					
-					<div class="form_lb cheb_yes">
-						 <input type="checkbox" name="" value=""/>
-						 <span>我已阅读并同意ppp在线的<a href=""><span style="color:#29A7E1;">《服务条款》</span></a> </span>
-					 	 <p><a href=""><img src="images/login_btn.png"></a></p>
-					</div>
-				</form>
+			<br>
+			<div class="input-group">
+				<span class="input-group-addon">密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<input type="password" class="form-control" placeholder="请输入密码">
 			</div>
-		</div>
-		<div class="right_pic fl" >
-			<div class="l_acc_dl">
-				<span>已有帐号？<a href=""><span style="color:#29A7E1;" ui-sref="login">立即登录</span></a></span>
+			<br>
+			<div class="input-group">
+				<span class="input-group-addon">确认密码</span>
+				<input type="password" class="form-control" placeholder="请再次输入密码">
 			</div>
-			<p><img src="images/right_bg.jpg"></p>
-		</div>
+			<br>
+			<div class="input-group">
+				<span class="input-group-addon">验证码&nbsp;&nbsp;</span>
+				<input type="text" class="form-control" placeholder="请输入手机短信验证码">
+				<span class="btn input-group-addon addval"
+					data-loading-text="已发送...">点击发送</span>
+			</div>
+			<br>
+			<p style="text-align: center;">
+				<button id="fat-btn" class="btn btn-primary" 
+					style="width:400px;"
+					data-loading-text="注册中..." 
+	   			type="button"> 注&nbsp;&nbsp;&nbsp;&nbsp;册
+	   			</button>
+			</p>
+		</form>
 	</div>
+	<div class="right_pic fl" >
+		<p><img src="images/right_bg.jpg"></p>
+	</div>
+</div>
+<script>
+    $(function() {
+        $(".btn").click(function(){
+            $(this).button('loading').delay(30000).queue(function() {
+               $(this).button('reset');
+            // $(this).dequeue(); 
+            });
+        });
+    });  
+</script>
+<style>
+	#login1{
+		margin-top: 150px;
+	}
+	.addval{
+		background: #828c24;
+		color: #fff;
+	}
+	span{
+		width:100px;
+	}
+</style>

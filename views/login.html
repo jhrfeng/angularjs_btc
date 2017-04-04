@@ -1,33 +1,54 @@
 <script type="text/javascript" src="lib/app/all.js"></script>
 
 <br><br>
-		<div id="form_main" class="px1000 clearfix">
-		<div class="form_main_grjg_xx">
-			<span id="form_main_gr">登录</span>
-		</div>
-		<div>
-			<div id="login1" class="left_form fl" >
-				<form>
-					<div class="form_lb">
-						<lable>手机/邮箱:</lable>
-						<input type="text" class="form-control" value="请输入手机/邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入手机/邮箱';}">
-					</div>
-					<div class="form_lb clearfix">
-							<lable>密码:</lable>
-							<input type="text" class="form-control" value="请输入密码" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入密码';}">
-					</div>
-					
-				</form>
-				<div class="form_lb cheb_yes">
-					<p><a href="#me"><img src="images/login_btn_1.jpg"></a></p>
-				</div>
+<div id="form_main" class="px1000 clearfix">
+	<div id="login1" class="left_form fl" >
+		<form class="bs-example bs-example-form" role="form">
+			<div class="input-group">
+				<span class="input-group-addon">手机号</span>
+				<input type="text" class="form-control" placeholder="请输入手机号">
 			</div>
-
-		
-		<div class="right_pic fl" >
-			<div class="l_acc_dl">
-				<span>已有帐号？<a href=""><span style="color:#29A7E1;">立即登录</span></a></span>
+			<br>
+			<div class="input-group">
+				<span class="input-group-addon">密&nbsp;&nbsp;&nbsp;码</span>
+				<input type="password" class="form-control" placeholder="请输入密码">
 			</div>
-			<p><img src="images/right_bg.jpg"></p>
-		</div>
+			<br>
+			<div class="input-group">
+				<span class="input-group-addon">验证码</span>
+				<input type="text" class="form-control" placeholder="请输入验证码">
+				<span class="input-group-addon addval">1+1=?</span>
+			</div>
+			<br>
+			<p style="text-align: center;">
+				<button id="fat-btn" class="btn btn-primary" 
+					style="width:400px;"
+					data-loading-text="登录中..." 
+	   			type="button"> 登&nbsp;&nbsp;&nbsp;&nbsp;录
+	   			</button>
+			</p>
+		</form>
 	</div>
+	<div class="right_pic fl" >
+		<p><img src="images/right_bg.jpg"></p>
+	</div>
+</div>
+<script>
+    $(function() {
+        $(".btn").click(function(){
+            $(this).button('loading').delay(2000).queue(function() {
+               $(this).button('reset');
+            // $(this).dequeue(); 
+            });
+        });
+    });  
+</script>
+<style>
+	#login1{
+		margin-top: 150px;
+	}
+	.addval{
+		background: #333333;
+		color: #fff;
+	}
+</style>

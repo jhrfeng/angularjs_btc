@@ -1,6 +1,6 @@
 app.controller('LoginController', 
-['$rootScope', '$scope', 'photos', '$routeParams', 
-function($rootScope, $scope, photos, $routeParams) {
+['$rootScope', '$scope', 'photos', 
+function($rootScope, $scope, photos) {
  
 	$rootScope.header = true;
 }]);

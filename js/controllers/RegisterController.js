@@ -1,6 +1,6 @@
 app.controller('RegisterController', 
-['$rootScope', '$scope', 'photos', '$routeParams', '$location', '$state',
-function($rootScope, $scope, photos, $routeParams, $location, $state) {
+['$rootScope', '$scope', 'photos','$state',
+function($rootScope, $scope, photos, $state) {
  
 	$rootScope.header = true;
 	
