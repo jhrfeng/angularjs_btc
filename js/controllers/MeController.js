@@ -1,15 +1,22 @@
 app.controller('MeController', 
-['$rootScope', '$scope', 
-function($rootScope, $scope) {
-	
-  $rootScope.header = true;
-  $scope.userName = "John";
-  $scope.passWord = "123456";
-  $scope.payPassWord = "123456";
-  
-  $scope.tabshow = 1;
-  
-  $scope.toChangeView = function(type) {
-	$scope.tabshow = type;
+['$rootScope', '$scope', 'httpUtil',
+function($rootScope, $scope, httpUtil) {
+	$rootScope.header = true;
+	 
+	$scope.tabshow = 1;
+	$scope.toChangeView = function(type) {
+		$scope.tabshow = type;
 	}
+	  
+	function ngInit(){
+		var reqUrl = globalConfig.rootUrl + "/me";
+		httpUtil.get(reqUrl, function(data, status){
+			if(status==200){
+				$scope.user = data;
+			}
+		})
+	}
+	
+	ngInit();
+  
 }]);

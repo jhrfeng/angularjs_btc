@@ -1,5 +1,13 @@
 var app = angular.module('GalleryApp', ['ui.router','oc.lazyLoad']); //'ngRoute',
 
+app.controller('rootCtrl',['$rootScope',function($rootScope){
+	if(window.localStorage.getItem("Authorization")){
+		$rootScope.me = true;		
+	}else{
+		$rootScope.me = false;
+	}
+}]);
+
 app.config(function ($stateProvider, $urlRouterProvider) { //$routeProvider, 
 	$urlRouterProvider.when('', '/home');
 	$stateProvider
@@ -19,27 +27,61 @@ app.config(function ($stateProvider, $urlRouterProvider) { //$routeProvider,
 			url:'/aboutus',
 			controller: 'AboutusController', 
 			templateUrl: 'views/aboutus.html',
-			
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		return $ocLazyLoad.load([
+//			 			'js/services/httpUtil.js'
+			 		]);
+			 	}]
+			}
 		})
 		.state('login',{
 			url:'/login',
 			templateUrl: 'views/login.html',
-			controller: 'LoginController', 
+			controller: 'LoginController',
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		return $ocLazyLoad.load([
+//			 			'js/services/httpUtil.js'
+			 		]);
+			 	}]
+			}
 		})
 		.state('register',{
 			url:'/register',
 			templateUrl: 'views/register.html',
-			controller: 'RegisterController', 
+			controller: 'RegisterController',
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		return $ocLazyLoad.load([
+//			 			'js/services/httpUtil.js'
+			 		]);
+			 	}]
+			}
 		})
 		.state('particulars',{
 			url:'/particulars',
 			templateUrl: 'views/particulars.html',
 			controller: 'particularsController', 
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		return $ocLazyLoad.load([
+//			 			'js/services/httpUtil.js'
+			 		]);
+			 	}]
+			}
 		})
 		.state('safety',{
 			url:'/safety',
 			templateUrl: 'views/safety.html',
 			controller: 'SafetyController', 
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		return $ocLazyLoad.load([
+//			 			'js/services/httpUtil.js'
+			 		]);
+			 	}]
+			}
 		})
 		.state('invest',{
 			url:'/invest',
@@ -56,43 +98,25 @@ app.config(function ($stateProvider, $urlRouterProvider) { //$routeProvider,
 		.state('me',{
 			url:'/me',
 			templateUrl: 'views/me.html',
-			controller: 'MeController', 
+			controller: 'MeController',
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		return $ocLazyLoad.load([
+//			 			'js/services/httpUtil.js'
+			 		]);
+			 	}]
+			}
+		}).state('order',{
+			url:'/order/{pid}',
+			templateUrl: 'views/order.html',
+			controller: 'OrderController',
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		return $ocLazyLoad.load([
+//						'js/controllers/OrderController.js'
+			 		]);
+			 	}]
+			}
 		});
-		
-//$routeProvider 
-//  .when('/home', { 
-//    controller: 'HomeController', 
-//    templateUrl: 'views/home.html' 
-//  })
-//  .when('/aboutus', {
-//    controller: 'AboutusController',
-//    templateUrl: 'views/aboutus.html'
-//  })
-//  .when('/login', {
-//    controller: 'LoginController',
-//    templateUrl: 'views/login.html'
-//  })
-//  .when('/register', {
-//    controller: 'RegisterController',
-//    templateUrl: 'views/register.html'
-//  })
-//  .when('/particulars', {
-//    controller: 'particularsController',
-//    templateUrl: 'views/particulars.html'
-//  })
-//  .when('/safety', {
-//    controller: 'SafetyController',
-//    templateUrl: 'views/safety.html'
-//  })
-//  .when('/invest', {
-//    controller: 'InvestController',
-//    templateUrl: 'views/invest.html'
-//  })
-//  .when('/photos/:id', {
-//    controller: 'PhotoController',
-//    templateUrl: 'views/photo.html'
-//  })
-//  .otherwise({ 
-//    redirectTo: '/home' 
-//  });
+
 });

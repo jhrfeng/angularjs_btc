@@ -111,7 +111,8 @@
 							<input type="text" value="输入金额" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '输入金额';}"/>
 							<img src="images/gy_treasure_small_bgt.png">
 							<input type="text" value="预期收益" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '预期收益';}"/>
-							<div class="gy_treasure_xsbid_down_tbmain">
+							<div class="gy_treasure_xsbid_down_tbmain"
+								ng-click="goOrder(product.pid)">
 								<a href="">
 									<p class="gy_treasure_xsbid_down_tb">
 									立即投资
@@ -124,68 +125,6 @@
 			</div>
 		</div>
 	</div>
-
-
-	<!--<div id="gy_guide_goverfirm_debt">
-		<div class="px1000">
-			<div class="gy_guide_gf_de_main_vbc clearfix">
-				<div class="fl" ng-repeat="obj in productList">
-					<div class="gy_guide_gf_threefour">
-						<div class="fl  gy_guide_gf_thrch" >
-							<p class="gy_guide_gf_poing">{{obj.name}}</p>
-							<p><span class="gy_guide_gf_sz">{{obj.shouyi}}</span>
-							<span class="gy_guide_gfc_bfh">%</span>
-							年化收益率
-							</p>
-							<p class="gy_guide_gf_cnima">期限{{obj.week}}天</p>
-							<p style="padding-top:30px;">河北 · 品牌服饰贸易企业</p>
-							<div class="gy_treasur_bg3">
-								<div class="gy_treasur_bg2" style="width:90%;background-color:#29A7E1;">
-								</div>
-							</div>
-							<div><span class="gy_guide_gf_cnidie">起投金额</span> {{obj.join}}</div>
-							<div class="gy_guide_gf_cnidie_ljtbst">
-								<div class="gy_guide_gf_cnidie_ljtbs">
-									<a href="">立即投资</a>
-								</div>
-							</div>
-						</div>
-					
-				  </div>
-				</div>
-			</div>
-		</div>
-	</div>-->
-
-
-	
-<!--	
-	<div id="gy_guide_hzhb_main">
-		<div class="px1000 gy_guide_hzhb_main_cp">
-			<div class="gy_guide_news_macp clearfix">
-				<span class="gy_guide_news_macp1 fl">合作机构</span>
-				<span class="gy_guide_news_macp2 fr"><a href="">更多>></a></span>
-			</div>
-			
-			<div>
-				<img src="images/gy_guide_hzhb_main_cp_pic.png">
-			</div>
-		</div>
-	</div>
-	<div id="gy_guide_hzhb_main">
-		<div class="px1000 gy_guide_hzhb_main_cp">
-			<div class="gy_guide_news_macp clearfix">
-				<span class="gy_guide_news_macp1 fl">合作媒体</span>
-				<span class="gy_guide_news_macp2 fr"><a href="">更多>></a></span>
-			</div>
-			
-			<div>
-				<img src="images/gy_guide_hzhb_main_cp_pic.png">
-			</div>
-		</div>
-	</div>
-	-->
-
 
 <script type="text/javascript">
 	function guideone(){

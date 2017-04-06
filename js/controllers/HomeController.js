@@ -1,11 +1,17 @@
 app.controller('HomeController', 
-['$rootScope', '$scope', 'photos',
-function($rootScope,$scope, photos) {
-
+['$rootScope', '$scope', 'photos', '$state',
+function($rootScope,$scope, photos, $state) {
 	$rootScope.header = false;
-//$scope.productList = productList; // 懒加载数据
+	// 初始化产品加载
 	photos.success(function(data) {
-    $scope.productList = data.productList;
+    	$scope.productList = data.productList;
 	});
+	
+	$scope.goOrder = function(pid){
+		console.log(pid);
+		$state.go("order", {pid:pid});
+	}
+	
+	
   
 }]);
