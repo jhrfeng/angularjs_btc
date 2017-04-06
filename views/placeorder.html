@@ -4,7 +4,7 @@
 <div id="form_main" class="px1000 clearfix">
 	<div id="login1" class="left_form" >
 		<table class="table table-bordered">
-			<caption>生成订单</caption>
+			<caption>确认订单</caption>
 			<thead>
 				<tr>
 					<th>产品名称</th>
@@ -24,24 +24,33 @@
 		</table>
 		<br>
 		<form class="bs-example bs-example-form" role="form">
-			<div class="input-group">
-				<span class="input-group-addon">购买金额</span>
-				<input type="number" ng-model="order.payAmount" class="form-control" placeholder="请输入您要投资的金额">
-				<span class="input-group-addon">元</span>
+				<span class="input-group-addon">购买金额
+					<em>200000元</em>	
+				</span>
+			<br>
+			<div class="switch">
+				<h2>请选择支付方式【目前只支持支付宝】</h2>
+			    <img src="images/zhifubao.png" style="height:60px;padding:10px 0" />
 			</div>
-			<br><br>
-			<p style="text-align: right;">
+			<br><br>			
+		    <p style="text-align: right;">
 				<button id="register" class="btn btn-primary" 
 					ng-click="generate()"
 					style="width:200px;"
-					data-loading-text="生成订单中..." 
-	   				type="button"> 生成订单
+					data-loading-text="处理中..." 
+	   				type="button"> 确认并支付
 	   			</button>
 			</p>
 		</form>
 	</div>
 </div>
 <style>
+	em{
+		font-size: 20px;
+		font-weight: bold;
+		color: #000000;
+		padding: 0 10px;
+	}
 	.left_form {
 	    border: 1px solid #ddd;
 	    padding: 40px;
@@ -49,8 +58,10 @@
 	}
 	.input-group-addon {
 	    font-size: 16px;
-	    color: #f9f9f9;
-	    background-color: #8BC34A;
+	    color: #607d8b;
+	    background-color: #fff;
+	    border: 0;
+	    text-align: right;
 	}
 	.table-bordered>tbody>tr>td{
 		font-weight: bold;

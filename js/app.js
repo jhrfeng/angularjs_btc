@@ -117,6 +117,17 @@ app.config(function ($stateProvider, $urlRouterProvider) { //$routeProvider,
 			 		]);
 			 	}]
 			}
+		}).state('placeorder',{
+			url:'/placeorder/{orderId}',
+			templateUrl: 'views/placeorder.html',
+			controller: 'PlaceorderController',
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		return $ocLazyLoad.load([
+
+			 		]);
+			 	}]
+			}
 		});
 
 });
