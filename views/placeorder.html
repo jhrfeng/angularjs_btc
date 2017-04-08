@@ -15,17 +15,17 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>{{product.name}}</td>
-					<td>{{product.week}}天</td>
-					<td>{{product.shouyi}}%</td>
-					<td>{{product.join}}</td>
+					<td>{{order.pid.name}}</td>
+					<td>{{order.pid.week}}天</td>
+					<td>{{order.pid.shouyi}}%</td>
+					<td>{{order.pid.join}}</td>
 				</tr>
 			</tbody>
 		</table>
 		<br>
 		<form class="bs-example bs-example-form" role="form">
 				<span class="input-group-addon">购买金额
-					<em>200000元</em>	
+					<em>{{order.payAmount}}元</em>	
 				</span>
 			<br>
 			<div class="switch">
@@ -45,6 +45,9 @@
 	</div>
 </div>
 <style>
+	#form_main{
+		padding-left: 24%;
+	}
 	em{
 		font-size: 20px;
 		font-weight: bold;
