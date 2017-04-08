@@ -128,6 +128,17 @@ app.config(function ($stateProvider, $urlRouterProvider) { //$routeProvider,
 			 		]);
 			 	}]
 			}
+		}).state('payorder',{
+			url:'/payorder/{orderId}',
+			templateUrl: 'views/payorder.html',
+			controller: 'PayorderController',
+			resolve: {
+			 	load: ['$ocLazyLoad', function($ocLazyLoad) {
+			 		return $ocLazyLoad.load([
+
+			 		]);
+			 	}]
+			}
 		});
 
 });

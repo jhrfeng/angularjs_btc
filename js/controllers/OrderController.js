@@ -2,9 +2,9 @@ app.controller('OrderController',
 ['$rootScope', '$scope', 'httpUtil', 'photos', '$state',
 function($rootScope, $scope, httpUtil, photos, $state) {
 	$rootScope.header = true;
+	$scope.order = {payAmount:null};
 	
 	function ngInit(){
-		console.log($state.params.pid)
 		photos.success(function(data) {
 			angular.forEach(data.productList, function(product, index){
 				if(product.pid==$state.params.pid){
@@ -15,9 +15,20 @@ function($rootScope, $scope, httpUtil, photos, $state) {
 	}
 	
 	$scope.generate = function(){
+		var reqUrl = globalConfig.rootUrl + "/order/neworder";
+		$scope.order.pid = $state.params.pid; // 获取产品id
 		if(validate()){
 			$("#register").button('loading');
-			$state.go("placeorder", {orderId:"000001"})
+			httpUtil.post(reqUrl, $scope.order, function(data, status){
+				$("#register").button('reset');
+				if(status==200){
+					if(data.data.status==200){
+						$state.go("placeorder", {orderId: data.data.orderid});
+					}else{
+						alert(data.msg)
+					}
+				}
+			})
 		}
 		
 	}

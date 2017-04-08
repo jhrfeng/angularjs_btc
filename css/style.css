@@ -1698,7 +1698,7 @@ background: url(../images/gy_guide_gove_gd_zfdz.png) no-repeat left center;
 .gy_step_proe1{font-size: 18px;color: #FFFFFF;padding: 10px 0px;background: url(../images/step_cp_p1.jpg) no-repeat center center;}
 .gy_step_proe2,.gy_step_proe3{font-size: 18px;color: #FFFFFF;padding: 10px 0px;background: url(../images/step_cp_p2.jpg) no-repeat center center;}
 /**********login start******************/
-#form_main{font-size: 14px;height: auto;margin-bottom: 30px;padding-left: 25%;}
+#form_main{font-size: 14px;height: auto;margin-bottom: 30px;}
 .saf_lv_main{position: relative;top: 5px;padding: 15px 0 0 90px;width: 300px;height:3px;background: #FFFFFF;}
 .form_main_grjg_xx{padding-left:100px;}
 #form_main_gr{padding: 10px 40px;background: #29A7E1;color: #FFFFFF;border-radius: 8px 8px 0px 0px;cursor: pointer;}
