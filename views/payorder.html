@@ -3,45 +3,37 @@
 <br><br>
 <div id="form_main" class="px1000 clearfix">
 	<div id="login1" class="left_form" >
-		<table class="table table-bordered">
-			<caption>生成订单</caption>
-			<thead>
-				<tr>
-					<th>产品名称</th>
-					<th>产品周期</th>
-					<th>年化回报率</th>
-					<th>起投金额</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>{{product.name}}</td>
-					<td>{{product.week}}天</td>
-					<td>{{product.shouyi}}%</td>
-					<td>{{product.join}}</td>
-				</tr>
-			</tbody>
-		</table>
-		<br>
-		<form class="bs-example bs-example-form" role="form">
-			<div class="input-group">
-				<span class="input-group-addon">购买金额</span>
-				<input type="number" ng-model="order.payAmount" class="form-control" placeholder="请输入您要投资的金额">
-				<span class="input-group-addon">元</span>
-			</div>
-			<br><br>
-			<p style="text-align: right;">
-				<button id="register" class="btn btn-primary" 
-					ng-click="generate()"
-					style="width:200px;"
-					data-loading-text="生成订单中..." 
-	   				type="button"> 生成订单
-	   			</button>
-			</p>
-		</form>
+		<!-- <iframe src="" frameborder="0"> -->
+			<table class="table table-bordered">
+				<caption>订单处理中.........</caption>
+				<thead>
+					
+				</thead>
+				<tbody>
+					<tr>
+						<td>若支付成功后，可在<a href="#/me">我的账号-我的订单</a>进行查看</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<form class="bs-example bs-example-form" role="form">
+				<br><br>
+				<p style="text-align: right;">
+					<button id="register" class="btn btn-primary" 
+						ng-click="queryResult()"
+						style="width:200px;"
+						data-loading-text="请稍等..." 
+		   				type="button"> 查询支付结果
+		   			</button>
+				</p>
+			</form>
+		<!-- </iframe> -->
 	</div>
 </div>
 <style>
+	a{
+		color: #009DDE;
+	}
 	#form_main{
 		padding-left: 20%;
 	}

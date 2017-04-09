@@ -22,7 +22,11 @@ function($rootScope, $scope, httpUtil, photos, $state) {
 			httpUtil.post(reqUrl, $scope.order, function(data, status){
 				$("#register").button('reset');
 				if(status==200){
-					$state.go("placeorder", {orderId: data.data.orderid});
+					console.log(data);
+					if(data.status==200)
+						$state.go("placeorder", {orderId: data.data.orderid});
+					else
+						alert(data.data.msg)
 				}else{
 					alert(data.msg)
 				}

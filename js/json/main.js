@@ -1,3 +1,3 @@
 globalConfig = {
-	rootUrl:'http://localhost:3000',
+	rootUrl:'http://www.ljzbtcbank.xyz',
 };

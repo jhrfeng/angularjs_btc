@@ -15,11 +15,18 @@ function($rootScope, $scope, httpUtil, photos, $state) {
 	}
 	
 	$scope.generate = function(){
-
 		$("#register").button('loading');
-		$state.go("payorder", {orderId:"000001"})
-
-		
+		var payUrl = globalConfig.rootUrl + "/aplipay/pay";
+		httpUtil.post(payUrl, {orderid:$state.params.orderId}, function(data, status){
+			if(status==200){
+				if(data.status==200){
+					window.location.href=data.url;
+				}else{
+					alert(data.msg)
+				}
+			}
+		})
+		// $state.go("payorder", {orderId:$state.params.orderId})
 	}
 	
 	
